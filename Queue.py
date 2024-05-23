@@ -1,24 +1,20 @@
 class Queue: 
-    def __init__ (self , Max):
-        self.queue=[]
+    def __init__ (self):
+        self.items=[]
         self.rear=0
         self.front=0
-        self.Max=Max
+        # self.Max=Max
     
-
-    def enqueue(item , self):
-        # if (self.rear == self.Max):
-        #     return "over flow"
-        # else:
+    def enqueue(self, item):
         self.rear= self.rear+1 
-        queue[rear] = item
+        self.items.append(item)
     
     def dequeue(self):
         if(self.isEmpty):
             return "UnderFlow"
         else:
-            self.front+=1
-            return q[self.front]
+            self.front +=1
+            return self.items.pop()
     
     def isEmpty(self):
         if(self.rear==self.front):

@@ -4,7 +4,6 @@ class CircularQueue:
         self.CircleQ=[]
         self.rear=0
         self.front=0
-
     
     def enqueue(self , item):
         if(self.SizeOfQueue==self.max_size):
@@ -18,9 +17,8 @@ class CircularQueue:
         if(self.isEmpty):
             return "Queue is empty"
         else:
-            x=CircleQ[self.front]
             self.front= (self.front% self.max_size)+1
-            return x
+            return self.CircleQ.pop()
             
     def isEmpty(self):
         if(self.rear==self.front):

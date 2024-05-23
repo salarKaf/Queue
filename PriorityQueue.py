@@ -9,7 +9,7 @@ class PriorityQueue:
         self.rear=0
         self.front=0
 
-        
+
     def enqueue(self, item, priority):
         if(self.isEmpty):
             item=data(priority , item)
@@ -26,8 +26,8 @@ class PriorityQueue:
         if(self.isEmpty):
             return "UnderFlow"
         else:
+            return self.pQueue.pop()
             self.front+=1
-            return q[self.front]
 
     def isEmpty(self):
         if(self.rear==self.front):
