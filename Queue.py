@@ -1,15 +1,15 @@
 class Queue: 
     def __init__ (self , Max):
         self.queue=[]
-        self.rear=-1
-        self.front=-1
+        self.rear=0
+        self.front=0
         self.Max=Max
     
 
     def enqueue(item , self):
         if (self.rear == self.Max):
-         return "over flow"
-         else:
+            return "over flow"
+        else:
             self.queue.append(item)
             self.rear+=1
     
