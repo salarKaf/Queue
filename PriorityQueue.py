@@ -3,22 +3,18 @@ class data:
         self.priority=priority
         self.item=item
 
-
-
-
-
 class PriorityQueue:
-    def __init__(self , Max):
+    def __init__(self):
         self.pQueue=[]
         self.rear=0
         self.front=0
-        self.Max=Max
+
+        
     def enqueue(self, item, priority):
-        if (self.rear == self.Max):
-             return "over flow"
-        elif(self.isEmpty):
-            self.item=data(priority , item)
-            self.pQueue.insert(0 , item)
+        if(self.isEmpty):
+            item=data(priority , item)
+            self.rear= self.rear+1 
+            self.queue[rear] = item
         else:
             self.item=data(priority , item)
             for i in range(0 , len(pQueue)):
@@ -26,12 +22,13 @@ class PriorityQueue:
                     self.queue.insert(i ,item)
                     self.rear+=1
     
-        def dequeue(self):
-            if(self.isEmpty):
-                return "UnderFlow"
-            else:
-                self.pQueue.pop(0)
-                self.front-=1
+    def dequeue(self):
+        if(self.isEmpty):
+            return "UnderFlow"
+        else:
+            self.front+=1
+            return q[self.front]
+
     def isEmpty(self):
         if(self.rear==self.front):
             return True

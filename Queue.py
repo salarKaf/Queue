@@ -7,18 +7,18 @@ class Queue:
     
 
     def enqueue(item , self):
-        if (self.rear == self.Max):
-            return "over flow"
-        else:
-            self.queue.append(item)
-            self.rear+=1
+        # if (self.rear == self.Max):
+        #     return "over flow"
+        # else:
+        self.rear= self.rear+1 
+        queue[rear] = item
     
     def dequeue(self):
         if(self.isEmpty):
             return "UnderFlow"
         else:
-            self.queue.pop(0)
-            self.front-=1
+            self.front+=1
+            return q[self.front]
     
     def isEmpty(self):
         if(self.rear==self.front):
